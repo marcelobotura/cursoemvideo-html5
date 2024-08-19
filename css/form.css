@@ -56,3 +56,11 @@ fieldset#pedido {
     background: url("../imagens/icone-pedido.png") no-repeat 95% 95%;
         
 }
+
+
+.imgFormEnviar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
