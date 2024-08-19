@@ -1,0 +1,294 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web');
+@font-face {
+    font-family: 'FonteLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+body {
+    font-family: 'Arial', 'sans-serif';
+    /*///color da pagina */
+    background-color:  rgba(0, 0, 0, 0.1);
+    /* color é cor da letra em rgba sendo  que a é alfha a transparencia */
+    color: rgba(0, 0, 0, 0.5);
+    
+    }
+
+/* Div */
+div#interface{
+    width: 900px;
+    background-color: #fff;
+    margin: -20px auto 0px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+    padding: 10px;
+}
+
+p {
+    text-align: justify;
+    text-indent: 50px;
+   
+}
+
+a {
+    color: #3d3d3d;
+    text-decoration: none;
+
+
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header#cabecalho img#icone {
+    position: absolute;
+    left: 750px;
+    top: 70px;
+}
+
+header#cabecalho {
+    border-bottom: 1px #606060 solid; /* linha*/
+    height: 150px; /*altura do cabeçario*/
+    background: url(../_imagens/glass-logo-peq.jpg) no-repeat 0px 80px;
+}
+
+header#cabecalho h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+    padding: 0px;
+    margin-bottom: 0px ;
+}
+
+header#cabecalho h2 {
+    font-family: 'Titillium Web', sans-serif;
+    color: #888;
+    font-size: 15pt;
+    padding: 0px;
+    margin-top: 0px;
+
+}
+/* ///Formatando imagens com legendas */
+/* /////////////IMAGENS/ */
+
+figure.foto-legenda {
+    position: relative;
+    /* colocando uma borda na imagem 8px é tamanho da borda, solida, cor da abora*/
+    border: 8px solid rgb(255, 255, 255);
+    /*colocando sobra na imagem (1px horizontal) (1px vertical) (4px espalhamento), cor*/
+    box-shadow: 1px 1px 4px black;
+    }
+
+  figure.foto-legenda img {
+        /*Tamanho da imagem width é largura 100%, height é a altura 100%*/
+        width: 100%;
+        height: 100%;  
+    }
+
+    /*/////////LEGENDA*/
+    /*figcaption é o filho da figure.foto-legenda*/
+    figure.foto-legenda figcaption {
+    /*Escondemos a escrita da imagem com opacity*/
+    opacity: 0%;
+    /* posição absoluta dentro da borda branca */
+    position: absolute;
+    /*Aqui legenda subiu para o topo*/
+    top: 0px;
+    /*estamos insirindo um fundo tranparente na imagem*/
+    background-color: rgba(0, 0, 0, .4);
+    /* letra branca*/
+    color: white;
+    /*iremos colocar a transparencia em toda a imagens*/
+    width: 100%;
+    height: 100%;
+    /*Criando um espaço dentro desta legenda*/
+    padding: 10px;
+    /*Para que a tranparencia não saia criamos um boxe dentro da borda*/
+    box-sizing: border-box;
+    /*Efeito de transição quando passar o mouse na imagem aparecendo a legenda*/
+    /*opacity é o paramentro que quero a transição*/
+    transition: opacity 1s;
+
+    }
+
+/*iremos fazer uma animação para quando passar o mouse a legenda apareça usando HOVER dispara uma classe especifica, uma formatação especifica que no caso é nosso FIGCAPTION*/
+figure.foto-legenda:hover figcaption {
+    /*quando utilizamos 1 significa 100% */
+    opacity: 1;
+
+}
+
+/*////////Formatação do menu */
+/*para fazer que meu menu flutui tenho que transformar ele em um bloco DISPLAY BLOCK*/
+nav#men {
+    display: block;
+    
+}
+
+/*quando lá no html tiver um id aqui no css colocamos # */
+/*aqui somente para UL*/
+
+nav#menu ul {
+    /* tiramaos os marcadores ● */
+    list-style: none;
+    /*vamos deixar as letras do menu MAIUSCULA*/
+    text-transform: uppercase;
+    /* quando uso a posição ABSOLUTE tenho que indicar aonde esta posição relativa*/
+    position: absolute;
+    top: -10px;
+    left: 300px; /* direcionamento esquerda ou direita*/
+    }
+
+nav#menu li {
+    /*fazer que um bloco seja colocado tudo na mesma linha*/
+    display: inline;
+    /*colocar cor no fundo*/
+    background-color: aqua;
+    /* PADDIN é o espaço dentro do menu*/
+    padding: 10px;
+    /* MARGIN é o espaço fora do menu*/
+    margin: 2px ;
+}
+nav#menu li:hover {
+    background-color: #606060;
+}
+
+nav#menu h1 {
+    display: none;
+}
+
+nav#menu a {
+    color: #000;
+    text-decoration: none;
+   
+}
+nav#menu a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/*Configuração do corpo*/
+section#corpo {
+    display: block; /* mostrar como bloco*/
+    width: 500px; /*larguda do corpo*/
+    float: left; /*flutuar corpo, para mostrar tem que esta configurado em bloco*/
+    border-right: 1px solid #606060 ; /* aqui criando um borda do lado direito, largura de 1 px, que tipo de linha que vamos usar SOLID, por fim cor da linha #606060*/
+    padding-right: 15px; /* criando um espaço da linha, pois quando criamos a linha ficou grudade, assim com 15px ela cria-se um espaço */
+}
+
+article#noticia-principal h2 {
+    font-size: 13pt;
+    color: #606060;
+    background-color: #ddd;
+    padding: 5px 0 5px 10px;
+    margin: 10px 0px 10px 0px;
+
+}
+
+header#cabecalho-artigo h1 {
+   
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    
+
+}
+
+header#cabecalho-artigo h2 {
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #fff;
+    margin: 0px;
+}
+
+.direita {
+    text-align: right;
+}
+header#cabecalho-artigo h3 {
+    font-size: 10pt;
+    color: #606060;
+   
+    
+}
+table#tabelaspec { /* configurando a tabela*/
+    border: 1px solid #606060; /* criando a borda da tabela*/
+    border-spacing: 0px; /* aqui com BORDER-SPACING com 0px tirando o espaço entre as linhas*/
+    margin-left: auto ; /*aqui estamos centralizando a nossa tabela*/
+    margin-right: auto ; /*aqui estamos centralizando a nossa tabela*/
+}
+
+table#tabelaspec td { /* configurando a linha tabela*/
+    border: 1px solid #606060; /* criando a borda da tabela*/
+    padding: 10px; /* criando espaço na tabela entre o texto e a linha*/
+    text-align: left;
+
+}
+/*aqui iremos formatar nossa classe da tabela*/
+table#tabelaspec td.ce { /*linha coluna esquerda */
+color: white; /*cor da letra*/
+background-color: #606060; /*cor da celula*/
+vertical-align: top; /*colocando o texto no top*/
+font-weight: bold; /*deixando meu texto em negrito*/
+text-align: right;
+}
+
+table#tabelaspec td.cd { /*linha coluna direita */
+    
+    color: white;
+    background-color: #cecece;
+    }
+
+    table#tabelaspec caption { /*configurando o titulo da minha tabela*/
+        color: #888; /*configurando a cor do meu texto */ 
+        font-size: 13pt; /*configraundo o tamanho do meu texto do titulo da minha tabela*/
+        font-weight: bolder; /*colocando titulo mais que negrito, isto é, mais forte*/
+        }
+        
+        table#tabelaspec caption span { /*formantando apenas a data da minha tabela através do span*/
+            display: block; /*deixamos a data flutante*/
+            float: right; /*flutando para direita*/
+            color: #000;
+            font-size: 8pt;
+            margin-top: 10px;
+        }
+
+/*Configuração da lateral*/
+aside#lateral {
+    display: block; /* mostrar como bloco*/
+    width: 350px; /*larguda do corpo*/
+    float: right; /*flutuar a lateral, para mostrar tem que esta configurado em bloco*/
+    background-color: #ddd;
+    margin-top: 10px;
+    padding: 10px;
+box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+aside#lateral h1 {
+font-family: 'FonteLogo', sans-serif;
+font-size: 20pt;
+color: #606060;
+margin-top: 0px;
+
+}
+
+aside#lateral h2 { 
+    background-color:#606060;
+    font-size: 13pt;
+    color: #fff;
+    padding: 5px;
+
+}
+
+/*Configuração da rodapé*/
+footer#rodape {
+    clear: both; /*serve para limpar as configuração da divisão do corpo e lateral*/
+    border-top: 1px solid #606060 ; /* aqui criando um borda do top do rodapé, largura de 1 px, que tipo de linha que vamos usar SOLID, por fim cor da linha #606060*/
+    padding-top: 15px; /* criando um espaço da linha, pois quando criamos a linha ficou grudade, assim com 15px ela cria-se um espaço */
+}
+
+footer#rodape p {
+    text-align: center;/*aqui centralizamos a linha*/
+}
