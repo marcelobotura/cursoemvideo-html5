@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web');
 @font-face {
     font-family: 'FonteLogo';
-    src: url("../_fonts/bubblegum-sans-regular.otf");
+    src: url("../fonts/bubblegum-sans-regular.otf");
 }
 
 body {
@@ -25,7 +25,7 @@ div#interface{
 
 p {
     text-align: justify;
-    text-indent: 50px;
+    text-indent: 30px;
    
 }
 
@@ -49,7 +49,7 @@ header#cabecalho img#icone {
 header#cabecalho {
     border-bottom: 1px #606060 solid; /* linha*/
     height: 150px; /*altura do cabeçario*/
-    background: url(../_imagens/glass-logo-peq.jpg) no-repeat 0px 80px;
+    background: url(../imagens/glass-logo-peq.jpg) no-repeat 0px 80px;
 }
 
 header#cabecalho h1 {
@@ -69,9 +69,33 @@ header#cabecalho h2 {
     margin-top: 0px;
 
 }
-/* ///Formatando imagens com legendas */
+/*foto Curso em Video*/
 /* /////////////IMAGENS/ */
 
+
+figure.curso-em-video img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
+figure.curso-em-video {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    margin: 0; /* Remove qualquer margem padrão */
+}
+
+
+figure.curso-em-video img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border: 8px solid rgb(255, 255, 255);/* Define a largura e a cor da borda */
+    border-radius: 50%; /* Torna a borda arredondada */
+    box-shadow: 1px 1px 4px black;
+}
 figure.foto-legenda {
     position: relative;
     /* colocando uma borda na imagem 8px é tamanho da borda, solida, cor da abora*/
@@ -138,13 +162,22 @@ nav#menu ul {
     position: absolute;
     top: -10px;
     left: 300px; /* direcionamento esquerda ou direita*/
+    
     }
 
+
+    /*div#interface{
+        width: 900px;
+        background-color: #fff;
+        margin: -20px auto 0px auto;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+        padding: 10px;
+    }*/
 nav#menu li {
     /*fazer que um bloco seja colocado tudo na mesma linha*/
     display: inline;
     /*colocar cor no fundo*/
-    background-color: aqua;
+    background-color: #cecece;
     /* PADDIN é o espaço dentro do menu*/
     padding: 10px;
     /* MARGIN é o espaço fora do menu*/
@@ -292,3 +325,6 @@ footer#rodape {
 footer#rodape p {
     text-align: center;/*aqui centralizamos a linha*/
 }
+
+
+

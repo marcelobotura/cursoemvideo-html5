@@ -1,8 +1,58 @@
 @charset "UTF-8";
 
-.enviar-centralizado {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Ajusta conforme a necessidade */
+form {
+    width: 500px; /*largurada do formulário*/
+    margin: auto;
+}
+
+
+input, textarea {
+    font-family: sans-serif; 
+    font-weight: normal; /* para que a fonte não fique negrita*/
+    font-size: 13pt;
+    background-color: rgba(255,255,255,.8);
+}
+
+input:hover, textarea {
+    background-color: #ddd;
+}
+
+legend {
+    color: #888;
+    font-weight: bold;
+    font-size: 13pt;
+    font-family: sans-serif;
+    
+
+}
+
+fieldset {
+    border-color: #cecece;
+    margin: 20px;
+}
+
+fieldset#sexo {
+    width: 150px;
+}
+
+fieldset#usuario {
+background: url("../imagens/icone-contato.png") no-repeat 95% 95%;
+
+}
+
+
+fieldset#endereco {
+    background: url("../imagens/icone-endereco.png") no-repeat 95% 95%;
+    
+}
+
+    
+fieldset#mensagem {
+    background: url("../imagens/icone-mensagem.png") no-repeat 95% 95%;
+    
+}
+
+fieldset#pedido {
+    background: url("../imagens/icone-pedido.png") no-repeat 95% 95%;
+        
 }
